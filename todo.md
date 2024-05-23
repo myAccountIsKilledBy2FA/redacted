@@ -1,0 +1,19 @@
+# To Do List
+---
+ - [ ] add maps
+   - [ ] outside area
+   - [ ] vault area
+ - [ ] add player character
+   - [ ] character model
+   - [ ] character hitbox
+   - [ ] move animation
+ - [ ] add physics
+   - [ ] smooth movement
+   - [ ] ragdoll on death
+   - [ ] bullet collision
+ - [ ] add menu
+   - [ ] buy menu
+   - [ ] settings menu
+   - [ ] launch/pause menu
+ - [ ] add mutiplayer
+   - [ ] idk yet
