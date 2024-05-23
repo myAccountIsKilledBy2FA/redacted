@@ -83,22 +83,11 @@ public class Game {
     private void loop() {
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
             handleInput();
             updateCamera();
             renderScene();
-            checkBallCollision();
             glfwSwapBuffers(window);
             glfwPollEvents();
-        }
-    }
-    private void checkBallCollision() {
-        Vector3f playerToBall = new Vector3f(ballPos).sub(playerPos);
-        float distanceToPlayer = playerToBall.length();
-
-        if (distanceToPlayer < ballRadius + 0.5f) {
-            playerToBall.normalize();
-            ballPos.sub(playerToBall.mul(playerSpeed));
         }
     }
 
@@ -164,54 +153,7 @@ public class Game {
     }
 
     private void renderScene() {
-        glColor3f(0.2f, 0.6f, 0.2f); // Green color for the ground
-        glTranslatef(playerPos.x, playerPos.y, playerPos.z);
-        glRotatef(playerRotation, 0.0f, 1.0f, 0.0f);
-
-        // Render the player character (e.g., a cube)
-        glBegin(GL_QUADS);
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-        glVertex3f(0.5f, -0.5f, -0.5f);
-
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, -0.5f);
-
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-
-        glVertex3f(-0.5f, -0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, -0.5f);
-        glVertex3f(-0.5f, 0.5f, 0.5f);
-        glVertex3f(-0.5f, -0.5f, 0.5f);
-
-        glVertex3f(0.5f, -0.5f, -0.5f);
-        glVertex3f(0.5f, 0.5f, -0.5f);
-        glVertex3f(0.5f, 0.5f, 0.5f);
-        glVertex3f(0.5f, -0.5f, 0.5f);
-        glEnd();
-
-        glColor3f(0.0f, 0.0f, 1.0f); // Blue color for the ball
-        glTranslatef(ballPos.x, ballPos.y, ballPos.z);
-        glBegin(GL_TRIANGLE_FAN);
-        glVertex3f(0.0f, 0.0f, 0.0f);
-        for (int i = 0; i <= 360; i += 10) {
-            float x = (float) Math.cos(Math.toRadians(i)) * ballRadius;
-            float z = (float) Math.sin(Math.toRadians(i)) * ballRadius;
-            glVertex3f(x, 0.0f, z);
-        }
-        glEnd();
-
+    
     }
 
     public static void main(String[] args) {
