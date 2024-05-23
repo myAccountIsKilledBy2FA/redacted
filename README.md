@@ -11,7 +11,11 @@ This game uses LWJGL [LWJGL](https://www.lwjgl.org/) and is coded in Java (obvio
 There are no specific rules of this game. You play, you join a server, and you compete with other players by shooting others. This game does not rely on graphics, we will be using simple shapes and geometry for the background, model, and any form of shaping. 
 
 ### Mechanics
-Player shoot each other. Every player only has one health (basically one shot then you are dead). Each game lasts 10 minutes, and the person who kills the most wins. (Basic FFA mode)
+Player shoot each other. Every player only has one health (basically one shot then you are dead). Each game lasts 10 minutes, and the person who kills the most wins. (Basic FFA mode).
+
+### Currency
+`Aurions` is the currency name for this game. There is a "Bank Vault" in the center of the map which players can stay there and collect `Aurions`. This serves as an alternative gaming routine other than simply combating with other players (like KOTH gamemodes)
+The players uses this currency to purchase weapons, and they can be converted to XP.
 
 ### Weapons
 Currently this game only support one type of gun, which is the basic pistol. 
@@ -24,3 +28,6 @@ Every player can be seen as a hitbox, and the bullet collision detects with the 
 
 ### Communication
 Netty is used for basic server / client communication. The client sends position packets and the server responds. Actual collisions are being checked in the server.
+
+### Anticheat
+Why do we care about hacking right now? Who cares if they hack our stats or whatever. We are storing all of this client side.
