@@ -14,7 +14,7 @@ public class Game {
     private int width = 800;
     private int height = 600;
 
-    private float playerRotation = 0.0f;
+
 
     private Vector3f cameraPos = new Vector3f(0.0f, 1.0f, 0.0f);
     private float cameraYaw = -90.0f;
@@ -26,8 +26,6 @@ public class Game {
     private Vector3f playerPos = new Vector3f(0.0f, 0.0f, 0.0f);
     private float playerSpeed = 0.05f;
     
-    private Vector3f ballPos = new Vector3f(0.0f, 0.5f, -2.0f);
-    private float ballRadius = 0.5f;
 
     private Matrix4f projectionMatrix = new Matrix4f();
     private Matrix4f viewMatrix = new Matrix4f();

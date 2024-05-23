@@ -2,7 +2,7 @@
 ---
  - [ ] add maps
    - [ ] outside area
-   - [ ] vault area
+   - [ ] vault areagit
  - [ ] add player character
    - [ ] character model
    - [ ] character hitbox
