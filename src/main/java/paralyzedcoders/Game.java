@@ -25,6 +25,9 @@ public class Game {
 
     private Vector3f playerPos = new Vector3f(0.0f, 0.0f, 0.0f);
     private float playerSpeed = 0.05f;
+    
+    private Vector3f ballPos = new Vector3f(0.0f, 0.5f, -2.0f);
+    private float ballRadius = 0.5f;
 
     private Matrix4f projectionMatrix = new Matrix4f();
     private Matrix4f viewMatrix = new Matrix4f();
@@ -76,19 +79,26 @@ public class Game {
 
         glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     }
-
-
+    
     private void loop() {
-        
         while (!glfwWindowShouldClose(window)) {
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
             handleInput();
             updateCamera();
             renderScene();
-
+            checkBallCollision();
             glfwSwapBuffers(window);
             glfwPollEvents();
+        }
+    }
+    private void checkBallCollision() {
+        Vector3f playerToBall = new Vector3f(ballPos).sub(playerPos);
+        float distanceToPlayer = playerToBall.length();
+
+        if (distanceToPlayer < ballRadius + 0.5f) {
+            playerToBall.normalize();
+            ballPos.sub(playerToBall.mul(playerSpeed));
         }
     }
 
@@ -190,6 +200,18 @@ public class Game {
         glVertex3f(0.5f, 0.5f, 0.5f);
         glVertex3f(0.5f, -0.5f, 0.5f);
         glEnd();
+
+        glColor3f(0.0f, 0.0f, 1.0f); // Blue color for the ball
+        glTranslatef(ballPos.x, ballPos.y, ballPos.z);
+        glBegin(GL_TRIANGLE_FAN);
+        glVertex3f(0.0f, 0.0f, 0.0f);
+        for (int i = 0; i <= 360; i += 10) {
+            float x = (float) Math.cos(Math.toRadians(i)) * ballRadius;
+            float z = (float) Math.sin(Math.toRadians(i)) * ballRadius;
+            glVertex3f(x, 0.0f, z);
+        }
+        glEnd();
+
     }
 
     public static void main(String[] args) {
