@@ -11,6 +11,7 @@ import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
 import org.joml.Matrix4f;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.glfw.GLFWErrorCallback;
+import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.system.MemoryUtil;
 /**
  * windowManager
@@ -65,14 +66,17 @@ public class windowManager {
     });
     GLFW.glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
       if(key==GLFW_KEY_ESCAPE && action == GLFW.GLFW_RELEASE) GLFW.glfwSetWindowShouldClose(window, true);
-    })
+    });
+    if (maximized) {GLFW.glfwMaximizeWindow(window);}
+    else {
+      GLFWVidMode vidMode = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
+      GLFW.glfwSetWindowPos(window, (vidMode.width() -width)/2, (vidMode.height() -height)/2);
+    }
+    
+    GLFW.glfwMakeContextCurrent(window);
 
   }
-  public boolean getResized() {
-    return this.resized;
-  }
+  public boolean getResized() {return this.resized;}
 
-  public void setResized(boolean resized) {
-    this.resized = resized;
-  }
+  public void setResized(boolean resized) {this.resized = resized;}
 }
