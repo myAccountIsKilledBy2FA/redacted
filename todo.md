@@ -9,7 +9,7 @@
    - [ ] move animation
  - [ ] add weapons
    - [ ] "dreamer": supressed
-   - [ ] "deathlock": revolver,onshot headshot, that deagle feel without that deagle inaccuretcy
+   - [ ] "deadlock": revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
    - [ ] "caibi": shotgun,oneshot kill close range
    - [ ] sub machine gun: fast fire rate, low damage
    - [ ] assault rifle: medium fire rate, onshot headshot
