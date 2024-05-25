@@ -1,18 +1,14 @@
 package paralyzedcoders.core;
 
-import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MAJOR;
-import static org.lwjgl.glfw.GLFW.GLFW_CONTEXT_VERSION_MINOR;
-import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
-import static org.lwjgl.glfw.GLFW.GLFW_MAXIMIZED;
-import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_FORWARD_COMPAT;
-import static org.lwjgl.glfw.GLFW.GLFW_OPENGL_PROFILE;
-import static org.lwjgl.glfw.GLFW.GLFW_TRUE;
-
-import org.joml.Matrix4f;
-import org.lwjgl.glfw.GLFW;
-import org.lwjgl.glfw.GLFWErrorCallback;
-import org.lwjgl.glfw.GLFWVidMode;
+import org.lwjgl.*;
+import org.lwjgl.glfw.*;
+import org.lwjgl.opengl.*;
 import org.lwjgl.system.MemoryUtil;
+import org.joml.Vector3f;
+import org.joml.Matrix4f;
+import static org.lwjgl.glfw.Callbacks.*;
+import static org.lwjgl.glfw.GLFW.*;
+import static org.lwjgl.opengl.GL11.*;
 /**
  * windowManager
  */
@@ -39,44 +35,104 @@ public class windowManager {
   }
   public void init() {
     GLFWErrorCallback.createPrint(System.err).set();
-    if (!GLFW.glfwInit()) throw new IllegalStateException("cringe");
-    GLFW.glfwDefaultWindowHints();
-    GLFW.glfwWindowHint(GLFW.GLFW_VISIBLE, GLFW.GLFW_FALSE);
-    GLFW.glfwWindowHint(GLFW.GLFW_RESIZABLE, GLFW.GLFW_TRUE);
-    GLFW.glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
-    GLFW.glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,2);
-    GLFW.glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW.GLFW_OPENGL_PROFILE);
-    GLFW.glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW.GLFW_TRUE);
+    if (!glfwInit()) throw new IllegalStateException("cringe");
+    glfwDefaultWindowHints();
+    glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+    glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,2);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_PROFILE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GLFW_TRUE);
 
     boolean maximized = false;
     if (width == 0 || height == 0) {
       width = 100;
       height = 100;
-      GLFW.glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
+      glfwWindowHint(GLFW_MAXIMIZED, GLFW_TRUE);
       maximized = true;
     }
 
-    window = GLFW.glfwCreateWindow(width, height, title, MemoryUtil.NULL, MemoryUtil.NULL);
+    window = glfwCreateWindow(width, height, title, MemoryUtil.NULL, MemoryUtil.NULL);
     if(window == MemoryUtil.NULL) throw new RuntimeException("cringe-r = cinge");
 
-    GLFW.glfwSetFramebufferSizeCallback(window, (window, width, height) -> {
+    glfwSetFramebufferSizeCallback(window, (window, width, height) -> {
       this.width = width;
       this.height = height;
       this.setResized(true);
     });
-    GLFW.glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
-      if(key==GLFW_KEY_ESCAPE && action == GLFW.GLFW_RELEASE) GLFW.glfwSetWindowShouldClose(window, true);
+    glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
+      if(key==GLFW_KEY_ESCAPE && action == GLFW_RELEASE)
+        glfwSetWindowShouldClose(window, true);
     });
-    if (maximized) {GLFW.glfwMaximizeWindow(window);}
+    if (maximized) {glfwMaximizeWindow(window);}
     else {
-      GLFWVidMode vidMode = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
-      GLFW.glfwSetWindowPos(window, (vidMode.width() -width)/2, (vidMode.height() -height)/2);
+      GLFWVidMode vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+      glfwSetWindowPos(window, (vidMode.width() -width)/2,
+                            (vidMode.height() -height)/2);
     }
-    
-    GLFW.glfwMakeContextCurrent(window);
+    glfwMakeContextCurrent(window);
+    if(isvSync()){glfwSwapInterval(1);}
+    glfwShowWindow(window);
+    GL.createCapabilities();
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_STENCIL_TEST);
+    glEnable(GL_CULL_FACE);
+    glEnable(GL_BACK);
+  }
+
+  public void update(){
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+  }
+
+  public boolean isKeyPressed(int code){
+    return glfwGetKey(window, code) == GLFW_PRESS;
 
   }
+
+
+  public String getTitle() { return this.title;}
+
+  public void setTitle(String title) { glfwSetWindowTitle(window, title); }
+  
   public boolean getResized() {return this.resized;}
 
   public void setResized(boolean resized) {this.resized = resized;}
+
+  public boolean isvSync() { return this.vSync;}
+
+  public void setvSync(boolean vSync) {this.vSync = vSync;}
+
+
+  public int getWidth() {
+    return this.width;
+  }
+
+  public void setWidth(int width) {
+    this.width = width;
+  }
+
+  public int getHeight() {
+    return this.height;
+  }
+
+  public void setHeight(int height) {
+    this.height = height;
+  }
+
+
+  public long getWindow() {
+    return this.window;
+  }
+
+  public void setWindow(long window) {
+    this.window = window;
+  }
+
+  public Matrix4f getProjectionMatrix() {
+    return this.projectionMatrix;
+  }
+
+
 }
