@@ -14,11 +14,11 @@ There are no specific rules of this game. You play, you join a server, and you c
 Player shoot each other. Every player only has one health (basically one shot then you are dead). Each game lasts 10 minutes, and the person who kills the most wins. (Basic FFA mode).
 
 ### Currency
-`Aurions` is the currency name for this game. There is a "Bank Vault" in the center of the map which players can stay there and collect `Aurions`. This serves as an alternative gaming routine other than simply combating with other players (like KOTH gamemodes)
+`Qubit` is the currency name for this game. There is a "" in the center of the map which players can stay there and collect `Qubit`. This serves as an alternative gaming routine other than simply combating with other players (like KOTH gamemodes)
 The players uses this currency to purchase weapons, and they can be converted to XP.
 
 ### Weapons
-Currently this game only support one type of gun, which is the basic pistol. we plan to add more weapons and abilities in the further :P
+all and items are shown in todo list. 
 
 ### Shooting
 Shooting in this game is very similar to other games. You have to stand still to shoot, but compared to other games, the weapon accuracy is more accurate.
