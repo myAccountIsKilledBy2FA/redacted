@@ -1,6 +1,9 @@
 package paralyzedcoders.core;
 
 import org.lwjgl.glfw.GLFWErrorCallback;
+
+import paralyzedcoders.core.utils.Constants;
+
 import static org.lwjgl.glfw.GLFW.*;
 
 public class EngineManager {
@@ -47,7 +50,7 @@ public class EngineManager {
           stop();
         }if (frameCounter > nano) {
           setFps(frames);
-          window.setTitle(window.getTitle()+" FPS:"+getFps());
+          window.setTitle(Constants.TITLE+" FPS:"+getFps());
           frames = 0;
           frameCounter = 0;
         }
