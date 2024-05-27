@@ -9,7 +9,7 @@
    - [ ] move animation
  - [ ] add weapons
    - [ ] "Oneirolyra" (instrument of dreams): supressed pistol
-   - [ ] "Noctemalyen" (creater of the night): revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
+   - [ ] "Noctemalyen" (creatureg of the night): revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
    - [ ] "caibi" (just caibi, what did you expect?): shotgun, oneshot kill close range
    - [ ] sub machine gun (no name yet cus smg is NOOB): fast fire rate, low damage
    - [ ] "Entropicor" (core of chaos): assult rifle, medium fire rate, onshot headshot
