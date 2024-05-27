@@ -8,13 +8,13 @@
    - [ ] character hitbox
    - [ ] move animation
  - [ ] add weapons
-   - [ ] "dreamer": supressed
-   - [ ] "deadlock": revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
+   - [ ] "Chromacrypsis": supressed
+   - [ ] "Gloamstalk": revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
    - [ ] "caibi": shotgun,oneshot kill close range
    - [ ] sub machine gun: fast fire rate, low damage
    - [ ] assault rifle: medium fire rate, onshot headshot
    - [ ] sniper rifle: oneshot
-   - [ ] "radiant": oneshot headshot, high movement speed, high kill reward
+   - [ ] "Elyscry": oneshot headshot, high movement speed, high kill reward
    - [ ] Glock 19-X: owen, aimbot
    - [ ] utility: flashbang, smoke, molotov, grenade
  - [ ] add physics
