@@ -5,7 +5,7 @@ Redacted is a lightweight Java game made with [LWJGL](https://www.lwjgl.org/)
 This game serves as a purpose to create a FPS game where you shoot in arenas and combat with other players. This game should be easy, fun, and quick, and serves as a lightweight game.
 
 ## Components
-This game uses LWJGL [LWJGL](https://www.lwjgl.org/) and is coded in Java (obviously). This library contains OpenGL, JOML, and other parent components. [Netty](https://netty.io/) is used(could be) for client / server communication utility, as this game is a multiplayer game.
+This game uses [LWJGL](https://www.lwjgl.org/) and is coded in Java (obviously). This library contains OpenGL, JOML, and other parent components. [Netty](https://netty.io/) is used(could be) for client / server communication utility, as this game is a multiplayer game.
 
 ## Design
 There are no specific rules of this game. You play, you join a server, and you compete with other players by shooting others. This game does not rely on graphics, we will be using simple shapes and geometry for the background, model, and any form of shaping. 
