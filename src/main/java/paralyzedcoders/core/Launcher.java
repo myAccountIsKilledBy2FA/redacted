@@ -5,21 +5,21 @@ import paralyzedcoders.core.utils.Constants;
 
 
 public class Launcher {
+  private static EngineManager engine;
 
-  private static WindowManager window;
 
   public static void main(String[] args){
     window = new WindowManager(Constants.TITLE,1600,900,false);
-    window.init();
-    while (!window.isClosed()) {
-      window.update();
+    engine = new EngineManager();
+    try {
+      engine.start();
+    } catch (Exception e){
+      e.printStackTrace();
     }
-    window.cleanup();
-    System.out.println("exiting...");
   }
 
-  public static WindowManager getWindow() {
-    return window;
-  }
+  // public static WindowManager getWindow() {
+  //   return window;
+  // }
 
 }

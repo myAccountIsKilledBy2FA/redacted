@@ -11,10 +11,10 @@
    - [ ] "Oneirolyra" (instrument of dreams): supressed pistol
    - [ ] "Noctemalyen" (creatureg of the night): revolver, onshot headshot, that deagle feel without that deagle inaccuretcy
    - [ ] "caibi" (just caibi, what did you expect?): shotgun, oneshot kill close range
-   - [ ] sub machine gun (no name yet cus smg is NOOB): fast fire rate, low damage
+   - [ ] sub machine gun (no name yet cus smg is NOOB):smg fast fire rate, low damage 
    - [ ] "Entropicor" (core of chaos): assult rifle, medium fire rate, onshot headshot
    - [ ] "Sanguismirage" (bloody illusion): sniper rifle, oneshot
-   - [ ] "Ekyplume" (breath of the sky): scout ,oneshot headshot, high movement speed, high kill reward
+   - [ ] "Skyplume" (breath of the sky): scout ,oneshot headshot, high movement speed, high kill reward
    - [ ] Glock 19-X (just Glock 19-X, what did you expect?): owen, aimbot
    - [ ] toll guns: idk yet.
    - [ ] knife: oneshot backstab, 2 shot front stab (same as cs :P)
