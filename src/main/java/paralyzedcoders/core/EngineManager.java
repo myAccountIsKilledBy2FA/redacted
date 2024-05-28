@@ -43,6 +43,10 @@ public class EngineManager {
       long passedTime = startTime - lastTime;
       lastTime = startTime;
       unprocessedTime += passedTime/(double)nano;
+      frameCounter += passedTime;
+       
+      input();
+
       while(unprocessedTime>frameTime) {
         render = true;
         unprocessedTime -=frameTime;
