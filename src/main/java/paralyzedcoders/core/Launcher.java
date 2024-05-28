@@ -6,6 +6,7 @@ import paralyzedcoders.core.utils.Constants;
 
 public class Launcher {
   private static EngineManager engine;
+  private static WindowManager window;
 
 
   public static void main(String[] args){
@@ -18,8 +19,8 @@ public class Launcher {
     }
   }
 
-  // public static WindowManager getWindow() {
-  //   return window;
-  // }
+   public static WindowManager getWindow() {
+     return window;
+   }
 
 }
