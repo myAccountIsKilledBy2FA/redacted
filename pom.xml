@@ -7,6 +7,29 @@
     <groupId>paralyzedcoders</groupId>
     <artifactId>redacted</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
+    <build>
+	    <plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-jar-plugin</artifactId>
+	        <!-- Here come other details
+	        ...
+	        -->
+	        <configuration>
+	          <archive>
+	            <manifest>
+	              <addClasspath>true</addClasspath>
+	              <mainClass>paralyzedcoders.core.Launcher</mainClass>
+	            </manifest>
+	          </archive>
+	        </configuration>
+	        <!-- Here come other details
+	        ...
+	        -->
+	      </plugin>
+	    </plugins>
+	  </build>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -100,9 +123,7 @@
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengl</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengles</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-openvr</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
-        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-openxr</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opus</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
-        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-ovr</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-par</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-remotery</artifactId><classifier>${lwjgl.natives}</classifier></dependency>
         <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-rpmalloc</artifactId><classifier>${lwjgl.natives}</classifier></dependency>

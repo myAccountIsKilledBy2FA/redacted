@@ -5,6 +5,12 @@ public class RenderManager {
 
   public RenderManager() {
     window = Launcher.getWindow();
-    
+
   }
+  public void init() throws Exception {
+
+  }
+  public void render() {
+    
+  } 
 }
