@@ -8,7 +8,7 @@ import paralyzedcoders.core.Launcher;
 import paralyzedcoders.core.RenderManager;
 import paralyzedcoders.core.WindowManager;
 
-public class TestGame implements ILogic{
+public class RedactedGame implements ILogic{
 
   private int direction = 0;
   private float color = 0.0f;
@@ -16,7 +16,7 @@ public class TestGame implements ILogic{
   private final RenderManager renderer;
   private final WindowManager window;
 
-  public TestGame(){
+  public RedactedGame(){
     renderer = new RenderManager();
     window = Launcher.getWindow();
 
@@ -25,7 +25,6 @@ public class TestGame implements ILogic{
   @Override
   public void init() throws Exception{
     renderer.init();
-
   }
 
   @Override
@@ -53,7 +52,10 @@ public class TestGame implements ILogic{
       glViewport(0,0,window.getWidth(),window.getHeight());
       window.setResized(true);
     }
+    //main render
     window.setClearColor(color,color,color,0.0f);
+
+    //clear
     renderer.clear();
   }
 

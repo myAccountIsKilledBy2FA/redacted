@@ -122,6 +122,9 @@ public class WindowManager {
 
   public void setHeight(int height) {this.height = height;}
 
+  public void setClearColor(float r,float g,float b,float a){
+    glClearColor(r, g, b, a);
+  }
 
   public long getWindow() {return this.window;}
 
