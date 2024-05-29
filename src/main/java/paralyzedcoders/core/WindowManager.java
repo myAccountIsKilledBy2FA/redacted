@@ -102,7 +102,7 @@ public class WindowManager {
 
   public void setTitle(String title) { glfwSetWindowTitle(window, title); }
   
-  public boolean getResized() {return this.resized;}
+  public boolean isResized() {return this.resized;}
 
   public void setResized(boolean resized) {this.resized = resized;}
 

@@ -10,5 +10,4 @@ public interface ILogic {
   void render();
 
   void cleanup();
-
 }

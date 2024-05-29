@@ -1,7 +1,7 @@
 package paralyzedcoders.core;
 
 import org.lwjgl.glfw.GLFWErrorCallback;
-
+import paralyzedcoders.core.ILogic;
 import paralyzedcoders.core.utils.Constants;
 
 import static org.lwjgl.glfw.GLFW.*;
