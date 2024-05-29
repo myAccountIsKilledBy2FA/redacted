@@ -1,7 +1,7 @@
 package paralyzedcoders.core;
 
 import org.lwjgl.glfw.GLFWErrorCallback;
-
+import paralyzedcoders.core.ILogic;
 import paralyzedcoders.core.utils.Constants;
 
 import static org.lwjgl.glfw.GLFW.*;
@@ -17,6 +17,7 @@ public class EngineManager {
   
   private WindowManager window;
   private GLFWErrorCallback errorCallback;
+  private ILogic gameLogic;
   
   private void init() throws Exception {
     glfwSetErrorCallback(errorCallback = GLFWErrorCallback.createPrint(System.err));
@@ -43,6 +44,10 @@ public class EngineManager {
       long passedTime = startTime - lastTime;
       lastTime = startTime;
       unprocessedTime += passedTime/(double)nano;
+      frameCounter += passedTime;
+       
+      input();
+
       while(unprocessedTime>frameTime) {
         render = true;
         unprocessedTime -=frameTime;
@@ -71,16 +76,18 @@ public class EngineManager {
     isRunning = false;
   }
   private void input(){
-
+    gameLogic.input();
   }
   private void render(){
-
+    gameLogic.render();
+    window.update();
   }
   private void update(){
-    window.update();
+    gameLogic.update();
   }
   private void clean(){
     window.cleanup();
+    gameLogic.cleanup();
     errorCallback.free();
     glfwTerminate();
   }

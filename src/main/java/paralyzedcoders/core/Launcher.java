@@ -8,7 +8,6 @@ public class Launcher {
   private static EngineManager engine;
   private static WindowManager window;
 
-
   public static void main(String[] args){
     window = new WindowManager(Constants.TITLE,1600,900,false);
     engine = new EngineManager();
@@ -19,8 +18,8 @@ public class Launcher {
     }
   }
 
-   public static WindowManager getWindow() {
-     return window;
-   }
+  public static WindowManager getWindow() {
+    return window;
+  }
 
 }
