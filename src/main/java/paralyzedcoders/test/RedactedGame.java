@@ -53,7 +53,32 @@ public class RedactedGame implements ILogic{
       window.setResized(true);
     }
     //main render
-    window.setClearColor(color,color,color,0.0f);
+    // glEnableClientState(GL11.GL_VERTEX_ARRAY);
+    // float[] vertices = {
+    //     -10.0f, 0.0f, -10.0f,
+    //     -10.0f, 0.0f, 10.0f,
+    //     10.0f, 0.0f, 10.0f,
+    //     10.0f, 0.0f, -10.0f
+    // };
+    // float[] colors = {
+    //     0.0f, 1.0f, 0.0f,
+    //     0.0f, 1.0f, 0.0f,
+    //     0.0f, 1.0f, 0.0f,
+    //     0.0f, 1.0f, 0.0f
+    // };
+    // float[] texCoords = {
+    //     0.0f, 0.0f,
+    //     0.0f, 1.0f,
+    //     1.0f, 1.0f,
+    //     1.0f, 0.0f
+    // };
+
+    // glVertexPointer(3, 0, vertices);
+    // glColor3f(1.0f, 1.0f, 1.0f);
+    // glColorPointer(3, 0, colors);
+    // glTexCoordPointer(2, 0, texCoords);
+    // glDrawArrays(GL_QUADS, 0, 4);
+    // glDisableClientState(GL_VERTEX_ARRAY);
 
     //clear
     renderer.clear();
