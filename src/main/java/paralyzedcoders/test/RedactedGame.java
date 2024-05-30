@@ -10,11 +10,12 @@ import paralyzedcoders.core.WindowManager;
 
 public class RedactedGame implements ILogic{
 
-  private int direction = 0;
   private float color = 0.0f;
 
   private final RenderManager renderer;
   private final WindowManager window;
+
+  private int playerX, playerY;
 
   public RedactedGame(){
     renderer = new RenderManager();
@@ -30,21 +31,14 @@ public class RedactedGame implements ILogic{
   @Override
   public void input(){
     if(window.isKeyPressed(GLFW_KEY_UP)){
-      direction = 1;
+      playerX+=1;
     }else if(window.isKeyPressed(GLFW_KEY_DOWN)){
-      direction = -1;
-    }else{
-      direction = 0;
+      playerX-=1;
     }
   }
   @Override
   public void update(){
-    color+= direction*0.01f;
-    if (color > 1 ) {
-      color = 1.0f;
-    }else if(color <= 0){
-      color = 0.0f;
-    }
+
   }
   @Override
   public void render(){
@@ -53,32 +47,19 @@ public class RedactedGame implements ILogic{
       window.setResized(true);
     }
     //main render
-    // glEnableClientState(GL11.GL_VERTEX_ARRAY);
-    // float[] vertices = {
-    //     -10.0f, 0.0f, -10.0f,
-    //     -10.0f, 0.0f, 10.0f,
-    //     10.0f, 0.0f, 10.0f,
-    //     10.0f, 0.0f, -10.0f
-    // };
-    // float[] colors = {
-    //     0.0f, 1.0f, 0.0f,
-    //     0.0f, 1.0f, 0.0f,
-    //     0.0f, 1.0f, 0.0f,
-    //     0.0f, 1.0f, 0.0f
-    // };
-    // float[] texCoords = {
-    //     0.0f, 0.0f,
-    //     0.0f, 1.0f,
-    //     1.0f, 1.0f,
-    //     1.0f, 0.0f
-    // };
+    glPushMatrix();
+    glTranslatef(playerX, playerY, 0);
 
-    // glVertexPointer(3, 0, vertices);
-    // glColor3f(1.0f, 1.0f, 1.0f);
-    // glColorPointer(3, 0, colors);
-    // glTexCoordPointer(2, 0, texCoords);
-    // glDrawArrays(GL_QUADS, 0, 4);
-    // glDisableClientState(GL_VERTEX_ARRAY);
+    glColor3f(1f, 0f, 0f); // Set color to red
+
+    glBegin(GL_QUADS);
+    glVertex2f(-10f, -10f); // Bottom-left corner
+    glVertex2f(-10f, 10f); // Top-left corner
+    glVertex2f(10f, 10f); // Top-right corner
+    glVertex2f(10f, -10f); // Bottom-right corner
+    glEnd();
+
+    glPopMatrix();
 
     //clear
     renderer.clear();

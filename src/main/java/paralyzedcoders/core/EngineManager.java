@@ -1,7 +1,8 @@
 package paralyzedcoders.core;
 
+import org.lwjgl.assimp.AIScene;
+import org.lwjgl.assimp.Assimp;
 import org.lwjgl.glfw.GLFWErrorCallback;
-import paralyzedcoders.core.ILogic;
 import paralyzedcoders.core.utils.Constants;
 
 import static org.lwjgl.glfw.GLFW.*;
@@ -98,5 +99,15 @@ public class EngineManager {
   }
   public void setFps(int fps) {
     EngineManager.fps = fps;
+  }
+
+  public static class ModelLoader {
+      public static AIScene loadModel(String path) {
+          AIScene scene = Assimp.aiImportFile(path, Assimp.aiProcess_Triangulate | Assimp.aiProcess_FlipUVs);
+          if (scene == null) {
+              throw new RuntimeException("Error loading model: " + Assimp.aiGetErrorString());
+          }
+          return scene;
+      }
   }
 }
