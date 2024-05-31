@@ -1,6 +1,7 @@
 package paralyzedcoders.engine;
 
 import org.joml.Vector3f;
+
 import paralyzedcoders.engine.graph.lights.DirectionalLight;
 import paralyzedcoders.engine.graph.lights.PointLight;
 import paralyzedcoders.engine.graph.lights.SpotLight;

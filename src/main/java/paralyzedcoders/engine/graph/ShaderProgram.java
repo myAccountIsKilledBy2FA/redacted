@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import org.joml.Vector2f;
 import org.lwjglb.engine.graph.lights.SpotLight;

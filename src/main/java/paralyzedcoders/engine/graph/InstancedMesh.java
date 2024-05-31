@@ -1,8 +1,9 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import org.joml.Matrix4f;
 import org.lwjgl.system.MemoryUtil;
-import org.lwjglb.engine.items.GameItem;
+
+import paralyzedcoders.engine.items.GameItem;
 
 import java.nio.FloatBuffer;
 import java.util.List;

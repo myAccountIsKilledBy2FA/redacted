@@ -4,6 +4,7 @@ import org.joml.Vector4f;
 import static org.lwjgl.assimp.Assimp.aiProcess_FindDegenerates;
 import static org.lwjgl.assimp.Assimp.aiProcess_JoinIdenticalVertices;
 import static org.lwjgl.assimp.Assimp.aiProcess_ValidateDataStructure;
+
 import paralyzedcoders.engine.graph.Material;
 import paralyzedcoders.engine.graph.Mesh;
 import paralyzedcoders.engine.graph.Texture;

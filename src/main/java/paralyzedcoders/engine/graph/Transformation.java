@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import org.joml.Matrix4f;
 import org.joml.Quaternionf;

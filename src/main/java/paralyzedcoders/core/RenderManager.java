@@ -2,6 +2,8 @@ package paralyzedcoders.core;
 
 import static org.lwjgl.opengl.GL11.*;
 
+import paralyzedcoders.Launcher;
+
 public class RenderManager {
   @SuppressWarnings("unused")
   private final WindowManager window;

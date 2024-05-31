@@ -1,10 +1,11 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
 import org.joml.Vector3f;
-import org.lwjglb.engine.Utils;
+
+import paralyzedcoders.engine.Utils;
 
 public class HeightMapMesh {
 

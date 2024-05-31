@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph.weather;
+package paralyzedcoders.engine.graph.weather;
 
 import org.joml.Vector3f;
 

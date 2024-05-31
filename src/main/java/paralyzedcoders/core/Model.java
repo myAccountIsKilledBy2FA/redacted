@@ -35,7 +35,7 @@ public class Model {
 
     public void render() {
         glBindVertexArray(vaoId);
-        .glDrawElements(GL_TRIANGLES, vertexCount, GL_UNSIGNED_INT, 0);
+        glDrawElements(GL_TRIANGLES, vertexCount, GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
     }
 

@@ -2,6 +2,7 @@ package paralyzedcoders.engine.items;
 
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
+
 import paralyzedcoders.engine.graph.Mesh;
 
 public class GameItem {

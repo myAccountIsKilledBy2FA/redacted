@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import java.awt.Color;
 import java.awt.Font;

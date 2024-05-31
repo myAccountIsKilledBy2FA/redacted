@@ -1,10 +1,11 @@
-package org.lwjglb.engine.graph;
-
-import org.lwjgl.system.MemoryStack;
-import org.lwjglb.engine.Window;
+package paralyzedcoders.engine.graph;
 
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
+
+import org.lwjgl.system.MemoryStack;
+
+import paralyzedcoders.engine.Window;
 
 import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.opengl.GL20.*;

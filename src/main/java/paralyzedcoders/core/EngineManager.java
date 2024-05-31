@@ -3,6 +3,8 @@ package paralyzedcoders.core;
 import org.lwjgl.assimp.AIScene;
 import org.lwjgl.assimp.Assimp;
 import org.lwjgl.glfw.GLFWErrorCallback;
+
+import paralyzedcoders.Launcher;
 import paralyzedcoders.core.utils.Constants;
 
 import static org.lwjgl.glfw.GLFW.*;

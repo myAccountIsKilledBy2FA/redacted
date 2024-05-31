@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import org.lwjgl.system.MemoryUtil;
 import org.lwjglb.engine.items.GameItem;

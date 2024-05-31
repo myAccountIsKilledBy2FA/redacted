@@ -1,4 +1,4 @@
-package org.lwjglb.engine.graph;
+package paralyzedcoders.engine.graph;
 
 import java.nio.ByteBuffer;
 import static org.lwjgl.opengl.GL11.*;

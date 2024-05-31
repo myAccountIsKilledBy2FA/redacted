@@ -2,6 +2,7 @@ package paralyzedcoders.engine.loaders.assimp;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import paralyzedcoders.engine.graph.Texture;
 
 public class TextureCache {
