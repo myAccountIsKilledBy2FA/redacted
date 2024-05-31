@@ -1,11 +1,11 @@
-package org.lwjglb.engine.items;
+package paralyzedcoders.engine.items;
 
 import java.util.ArrayList;
 import java.util.List;
-import org.lwjglb.engine.Utils;
-import org.lwjglb.engine.graph.FontTexture;
-import org.lwjglb.engine.graph.Material;
-import org.lwjglb.engine.graph.Mesh;
+import paralyzedcoders.engine.Utils;
+import paralyzedcoders.engine.graph.FontTexture;
+import paralyzedcoders.engine.graph.Material;
+import paralyzedcoders.engine.graph.Mesh;
 
 public class TextItem extends GameItem {
 

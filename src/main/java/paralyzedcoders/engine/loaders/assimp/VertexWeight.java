@@ -1,4 +1,4 @@
-package org.lwjglb.engine.loaders.assimp;
+package paralyzedcoders.engine.loaders.assimp;
 
 public class VertexWeight {
 

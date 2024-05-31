@@ -1,15 +1,15 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
-import org.lwjglb.engine.items.SkyBox;
-import org.lwjglb.engine.items.GameItem;
+import paralyzedcoders.engine.items.SkyBox;
+import paralyzedcoders.engine.items.GameItem;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.lwjglb.engine.graph.InstancedMesh;
-import org.lwjglb.engine.graph.Mesh;
-import org.lwjglb.engine.graph.particles.IParticleEmitter;
-import org.lwjglb.engine.graph.weather.Fog;
+import paralyzedcoders.engine.graph.InstancedMesh;
+import paralyzedcoders.engine.graph.Mesh;
+import paralyzedcoders.engine.graph.particles.IParticleEmitter;
+import paralyzedcoders.engine.graph.weather.Fog;
 
 public class Scene {
 

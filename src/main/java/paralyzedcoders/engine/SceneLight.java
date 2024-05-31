@@ -1,9 +1,9 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
 import org.joml.Vector3f;
-import org.lwjglb.engine.graph.lights.DirectionalLight;
-import org.lwjglb.engine.graph.lights.PointLight;
-import org.lwjglb.engine.graph.lights.SpotLight;
+import paralyzedcoders.engine.graph.lights.DirectionalLight;
+import paralyzedcoders.engine.graph.lights.PointLight;
+import paralyzedcoders.engine.graph.lights.SpotLight;
 
 public class SceneLight {
 

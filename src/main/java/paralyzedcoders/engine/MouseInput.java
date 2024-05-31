@@ -1,4 +1,4 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
 import org.joml.Vector2d;
 import org.joml.Vector2f;

@@ -1,8 +1,8 @@
-package org.lwjglb.engine.items;
+package paralyzedcoders.engine.items;
 
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
-import org.lwjglb.engine.graph.Mesh;
+import paralyzedcoders.engine.graph.Mesh;
 
 public class GameItem {
 

@@ -1,4 +1,4 @@
-package org.lwjglb.game;
+package paralyzedcoders.game;
 
 import java.nio.ByteBuffer;
 import java.nio.DoubleBuffer;
@@ -11,8 +11,8 @@ import static org.lwjgl.nanovg.NanoVG.*;
 import static org.lwjgl.nanovg.NanoVGGL3.*;
 import org.lwjgl.system.MemoryUtil;
 import static org.lwjgl.system.MemoryUtil.NULL;
-import org.lwjglb.engine.Utils;
-import org.lwjglb.engine.Window;
+import paralyzedcoders.engine.Utils;
+import paralyzedcoders.engine.Window;
 
 public class Hud {
 

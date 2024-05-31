@@ -1,6 +1,6 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
-import org.lwjglb.engine.sound.SoundManager;
+import paralyzedcoders.engine.sound.SoundManager;
 
 public class GameEngine implements Runnable {
 

@@ -1,4 +1,4 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
 public class Timer {
 

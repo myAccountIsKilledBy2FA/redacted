@@ -1,4 +1,5 @@
 package paralyzedcoders;
+
 import paralyzedcoders.engine.GameEngine;
 import paralyzedcoders.engine.IGameLogic;
 import paralyzedcoders.engine.Window;

@@ -1,4 +1,4 @@
-package org.lwjglb.engine.loaders.assimp;
+package paralyzedcoders.engine.loaders.assimp;
 
 import java.util.ArrayList;
 import java.util.List;

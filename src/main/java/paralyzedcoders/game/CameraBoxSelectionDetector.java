@@ -1,10 +1,11 @@
-package org.lwjglb.game;
+package paralyzedcoders.game;
 
-import org.joml.primitives.Intersectionf;
+import org.joml.Intersectionf;
+//import org.joml.primitives.Intersectionf;
 import org.joml.Vector2f;
 import org.joml.Vector3f;
-import org.lwjglb.engine.graph.Camera;
-import org.lwjglb.engine.items.GameItem;
+import paralyzedcoders.engine.graph.Camera;
+import paralyzedcoders.engine.items.GameItem;
 
 public class CameraBoxSelectionDetector {
 

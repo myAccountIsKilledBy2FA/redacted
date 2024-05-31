@@ -1,4 +1,4 @@
-package org.lwjglb.engine;
+package paralyzedcoders.engine;
 
 import org.joml.Matrix4f;
 import static org.lwjgl.glfw.GLFW.*;

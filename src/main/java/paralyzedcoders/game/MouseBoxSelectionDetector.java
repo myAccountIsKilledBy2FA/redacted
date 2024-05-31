@@ -1,12 +1,12 @@
-package org.lwjglb.game;
+package paralyzedcoders.game;
 
 import org.joml.Matrix4f;
 import org.joml.Vector2d;
 import org.joml.Vector3f;
 import org.joml.Vector4f;
-import org.lwjglb.engine.Window;
-import org.lwjglb.engine.graph.Camera;
-import org.lwjglb.engine.items.GameItem;
+import paralyzedcoders.engine.Window;
+import paralyzedcoders.engine.graph.Camera;
+import paralyzedcoders.engine.items.GameItem;
 
 public class MouseBoxSelectionDetector extends CameraBoxSelectionDetector {
 

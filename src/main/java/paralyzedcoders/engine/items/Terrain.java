@@ -1,4 +1,4 @@
-package org.lwjglb.engine.items;
+package paralyzedcoders.engine.items;
 
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -6,8 +6,8 @@ import org.joml.Vector3f;
 import static org.lwjgl.stb.STBImage.*;
 import org.lwjgl.system.MemoryStack;
 import static org.lwjgl.system.MemoryStack.stackPush;
-import org.lwjglb.engine.Utils;
-import org.lwjglb.engine.graph.HeightMapMesh;
+import paralyzedcoders.engine.Utils;
+import paralyzedcoders.engine.graph.HeightMapMesh;
 
 public class Terrain {
 

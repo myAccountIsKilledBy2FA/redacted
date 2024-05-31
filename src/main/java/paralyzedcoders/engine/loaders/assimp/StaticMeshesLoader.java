@@ -1,4 +1,4 @@
-package org.lwjglb.engine.loaders.assimp;
+package paralyzedcoders.engine.loaders.assimp;
 
 import java.nio.IntBuffer;
 import java.util.ArrayList;
@@ -15,10 +15,10 @@ import org.lwjgl.assimp.AIString;
 import org.lwjgl.assimp.AIVector3D;
 import org.lwjgl.assimp.Assimp;
 import static org.lwjgl.assimp.Assimp.*;
-import org.lwjglb.engine.Utils;
-import org.lwjglb.engine.graph.Material;
-import org.lwjglb.engine.graph.Mesh;
-import org.lwjglb.engine.graph.Texture;
+import paralyzedcoders.engine.Utils;
+import paralyzedcoders.engine.graph.Material;
+import paralyzedcoders.engine.graph.Mesh;
+import paralyzedcoders.engine.graph.Texture;
 
 public class StaticMeshesLoader {
 

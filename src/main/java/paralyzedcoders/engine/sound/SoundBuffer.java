@@ -1,4 +1,4 @@
-package org.lwjglb.engine.sound;
+package paralyzedcoders.engine.sound;
 
 import java.nio.ByteBuffer;
 import java.nio.IntBuffer;
@@ -9,7 +9,7 @@ import static org.lwjgl.stb.STBVorbis.*;
 import org.lwjgl.system.MemoryStack;
 import org.lwjgl.system.MemoryUtil;
 import static org.lwjgl.system.MemoryUtil.*;
-import org.lwjglb.engine.Utils;
+import paralyzedcoders.engine.Utils;
 
 public class SoundBuffer {
 

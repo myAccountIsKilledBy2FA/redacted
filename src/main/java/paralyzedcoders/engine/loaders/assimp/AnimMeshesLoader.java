@@ -1,11 +1,11 @@
-package org.lwjglb.engine.loaders.assimp;
+package paralyzedcoders.engine.loaders.assimp;
 
 import org.joml.*;
 import org.lwjgl.PointerBuffer;
 import org.lwjgl.assimp.*;
-import org.lwjglb.engine.Utils;
-import org.lwjglb.engine.graph.*;
-import org.lwjglb.engine.graph.anim.*;
+import paralyzedcoders.engine.Utils;
+import paralyzedcoders.engine.graph.*;
+import paralyzedcoders.engine.graph.anim.*;
 
 import java.lang.Math;
 import java.util.*;

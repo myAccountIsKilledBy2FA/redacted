@@ -1,13 +1,13 @@
-package org.lwjglb.engine.items;
+package paralyzedcoders.engine.items;
 
 import org.joml.Vector4f;
 import static org.lwjgl.assimp.Assimp.aiProcess_FindDegenerates;
 import static org.lwjgl.assimp.Assimp.aiProcess_JoinIdenticalVertices;
 import static org.lwjgl.assimp.Assimp.aiProcess_ValidateDataStructure;
-import org.lwjglb.engine.graph.Material;
-import org.lwjglb.engine.graph.Mesh;
-import org.lwjglb.engine.graph.Texture;
-import org.lwjglb.engine.loaders.assimp.StaticMeshesLoader;
+import paralyzedcoders.engine.graph.Material;
+import paralyzedcoders.engine.graph.Mesh;
+import paralyzedcoders.engine.graph.Texture;
+import paralyzedcoders.engine.loaders.assimp.StaticMeshesLoader;
 
 public class SkyBox extends GameItem {
 
