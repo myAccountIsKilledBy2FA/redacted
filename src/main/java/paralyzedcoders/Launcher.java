@@ -1,11 +1,8 @@
-package paralyzedcoders.core;
-
+package paralyzedcoders;
 import paralyzedcoders.engine.GameEngine;
 import paralyzedcoders.engine.IGameLogic;
 import paralyzedcoders.engine.Window;
 import paralyzedcoders.game.DummyGame;
-
-
 
 public class Launcher {
   public static void main(String[] args) {
